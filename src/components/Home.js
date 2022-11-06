@@ -1,8 +1,17 @@
 import React from "react";
+import {Helmet} from "react-helmet-async"
 
 const Home = () => {
     return (
       <div className="home-container">
+         <Helmet>
+                <title>Home</title>
+                <meta name="description" content="my home page" />
+                <meta
+                    name="keywords"
+                    content="react-helmet, altschool africa, github repos, github api, react hooks,"
+                />
+            </Helmet>
         <h1 className="alt">ALTSCHOOL OF ENGINEERING EXAM NO 1</h1>
         <div className="work">
            <p>

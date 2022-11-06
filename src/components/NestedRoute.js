@@ -15,13 +15,18 @@ function NestedRoute() {
   return (
     <div className='card'>
       {
-        loading ? <div>
-            <p>name: {Repo.name}</p>
-            <p>id: {Repo.id}</p>
-            <p>description: {Repo.description}</p>
-            <p>fullname: {Repo.name}</p>
-            <p>visibility: {Repo.name}</p>
-        </div> : <p>please wait..</p>
+        loading ?
+        <div class="nested_container">
+          <div class="school">
+            <p id="name"><strong>{Repo.name}</strong></p>
+            <p><strong>ID</strong>: {Repo.id}</p>
+            <p><strong>Description</strong>: {Repo.description}</p>
+            <p><strong>Fullname</strong>: {Repo.full_name}</p>
+            <p><strong>Visibility</strong>: {Repo.visibility}
+            </p>
+          </div>
+        </div> : 
+        <p>please wait..</p>
       }
     </div>
   )

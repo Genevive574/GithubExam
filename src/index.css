@@ -3,9 +3,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  background-color: #333;
+  background-color: #bdbbbb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+
 }
 
 code {
@@ -13,31 +17,38 @@ code {
     monospace;
 }
 
-.homecontainer {
-  max-width: 600px;
-  margin: 0 auto;
-  width: 100%;
-  font-size: 40px;
-  color: antiquewhite;
+.home-container {
+  background-color: hsl(0, 0%, 33%);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
 }
+
 .alt {
   font-size: 20px;
-  color: antiquewhite;
+  color: white;
   padding: 20px 10px;
   text-align: center;
   text-decoration: underline;
 }
-.work {
+
+.work p {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
   font-size: 20px;
   text-align: left;
-  color: antiquewhite;
+  color: white;
 }
+
 nav {
-  background-color: #333;
+  background-color: #383737;
   padding: 16px 32px;
   text-align: right;
-  font-size: 20px;
+  font-size: 1em;
   overflow: hidden;
+  filter: drop-shadow(2px 6px 14px rgb(143, 143, 143));
 }
 
 nav a {
@@ -52,22 +63,26 @@ nav a.active {
 }
 
 nav a:hover {
-  background-color: antiquewhite;
-  color: black;
+  background-color: #919191;
+  color: white;
 }
-.error {
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  padding: 60px 40px;
-  font-size: 30px;
-  color: antiquewhite;
+.errorpage {
+  background-color: hsl(0, 0%, 33%);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    color: white;
+    width: 70%;
+    height: 18em;
 }
 .error-page {
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   width: 100%;
-  padding: 40px 20px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
   font-size: 20px;
 }
 
@@ -75,11 +90,14 @@ button {
   height: 40px;
   font-family: inherit;
   font-weight: 600;
-  background: transparent;
-  color: antiquewhite;
+  background: #383737;
+  color: white;
   cursor: pointer;
   transition: all 0.3secs ease;
+  border: none;
+  border-radius: 7px;
 }
+
 button:hover {
   transform: scale(1.1);
   color: burlywood;
@@ -88,32 +106,112 @@ button:hover {
   font-size: 14px;
   text-align: center;
 }
+
+
 .paginationBtns {
-  width: 90%;
-  height: 40px;
+  width: 100%;
+  height: 30px;
   list-style: none;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 20px;
 }
 
 .paginationBtns a {
   padding: 5px;
   margin: 5px;
-  border-radius: 2px;
-  box-shadow: burlywood;
-  color: rgb(14, 12, 12);
+  border-radius: 3px;
+  color: white;
   background-color: antiquewhite;
   text-decoration: none;
   cursor: pointer;
+  background-color: #292828;
 }
 
 .paginationBtns a:hover {
-  color: antiquewhite;
-  background-color: #333;
+ background-color: #919191;
+color: white;
 }
 
 .paginationActive a {
-  background-color: blue;
-  color: #282c34;
-  box-shadow: palevioletred;
+  background-color: #919191;
+  color: white;
+}
+
+.wrapper {
+  width: 1150px;
+  margin: 5% auto;
+  position: relative;
+}
+
+.card_item {
+  float: left;
+  width: calc(30% - 5px);
+  max-width: 100%;
+  padding: 10px;
+  background-color: hsl(0, 0%, 33%);
+  border-radius: 0.5em;
+  margin: 10px;
+  height: 20em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card_top {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 0;
+  color: white;
+}
+
+.card_buttom {
+  text-align: left;
+}
+
+.card_top h1{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.id, .desc {
+  padding: 2px;
+  padding-bottom: 0;
+  width: fit-content;
+}
+
+.nested_container {
+  background-color: hsl(0, 0%, 33%);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  width: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.school {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  font-size: 20px;
+  text-align: left;
+  color: white;
+}
+
+#name {
+  text-align: center;
+}
+
+.error{
+  position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#wait {
+  color: white;
 }

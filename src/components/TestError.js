@@ -12,7 +12,7 @@ function TestError() {
         throw new Error('sorry something went wrong')
     }
   return (
-    <div>
+    <div class="error">
       <input type='text' placeholder='fire' onChange={ErrorBoundarytest} value={testmessage} autoFocus/>
       {testmessage === 'fire' ? <Firetest /> : ''} 
     </div>

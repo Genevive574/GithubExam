@@ -7,11 +7,12 @@ import ErrorPage from "./components/ErrorPage";
 import ErrorBoundary from "./components/ErrorBoundary";
 import NestedRoute from "./components/NestedRoute";
 import TestError from "./components/TestError";
-
+import {HelmetProvider} from "react-helmet-async";
 
 function App() {
   return (
     <div className="App">
+      <HelmetProvider>
        <ErrorBoundary>
        <BrowserRouter>
         <Navbar />
@@ -24,6 +25,7 @@ function App() {
           </Routes>
        </BrowserRouter>
        </ErrorBoundary>
+       </HelmetProvider>
     </div>
   );
 }
